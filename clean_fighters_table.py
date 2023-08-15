@@ -68,22 +68,27 @@ fights_df['op1_surname'] = fights_df['opponent_2'].str.split(' ').apply(lambda  
 
 #split verdict field in fights table
 fights_df['winner'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[0]).str.lower()
-fights_df['decision'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[2] if 6 == len(x) else x[3])
-fights_df['round'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[5] if 6 == len(x) else x[6])
+fights_df['decision'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[2] if 6 == len(x) else x[3] if 7 ==len(x) else x[4])
+fights_df['round'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[5] if 6 == len(x) else x[6] if 7 == len(x) else x[7])
 
 ##########replace winner name field with opponent number############
 fights_df.loc[(fights_df['winner'] == fights_df['op1_last_name']), 'winner'] = 'op_1'
-fights_df.loc[(fights_df['winner'] == fights_df['op1_middle_name']), 'winner'] = 'op_1' #this has to be done since the previous
 fights_df.loc[(fights_df['winner'] == fights_df['op2_last_name']), 'winner'] = 'op_2'
-fights_df.loc[(fights_df['winner'] == fights_df['op2_middle_name']), 'winner'] = 'op_2'
+
+fighter_df['height'] = fighter_df['height'].str.extract(r'\(([\d.]+) m\)')
+fighter_df['reach'] = fighter_df['reach'].str.extract(r'\(([\d.]+) cm\)')
+fighter_df['ko_rate'] = fighter_df['ko_rate'].str.replace('%', '')
+fighter_df.replace(pd.NA, 'NULL', inplace=True)
+fighter_df.replace('Unknown', 'NULL', inplace=True)
+fights_df.replace(pd.NA, 'NULL', inplace=True)
 
 
-# with pd.option_context('display.max_rows', None,
-#                        'display.max_columns', None,
-#                        'display.precision', 3,
-#                        ):
-#     print(fighter_df[['first_name','middle_name','last_name','surname']])
-#     print(fights_df[['winner']])
+with pd.option_context('display.max_rows', None,
+                       'display.max_columns', None,
+                       'display.precision', 3,
+                       ):
+    print(fighter_df[['first_name','height', 'reach']])
+    print(fights_df[['winner']])
 
 fighter_df.to_csv('fighters_clean.csv')
 fights_df.to_csv('fights_clean.csv')

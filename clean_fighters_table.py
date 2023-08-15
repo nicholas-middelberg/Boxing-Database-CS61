@@ -75,6 +75,7 @@ fights_df['round'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[5] if
 fights_df.loc[(fights_df['winner'] == fights_df['op1_last_name']), 'winner'] = 'op_1'
 fights_df.loc[(fights_df['winner'] == fights_df['op2_last_name']), 'winner'] = 'op_2'
 
+#remove symbols from height, reach, and ko_rate columns for importation into MySQL and write NULL values into missing spaces in the csv"
 fighter_df['height'] = fighter_df['height'].str.extract(r'\(([\d.]+) m\)')
 fighter_df['reach'] = fighter_df['reach'].str.extract(r'\(([\d.]+) cm\)')
 fighter_df['ko_rate'] = fighter_df['ko_rate'].str.replace('%', '')

@@ -20,6 +20,12 @@ def get_surname(x):
     else:
         return pd.NA
 
+def print_df(df):
+    with pd.option_context('display.max_rows', None,
+                           'display.max_columns', None,
+                           'display.precision', 3,
+                           ):
+        print(df)
 
 ##########import and fighter and fights tables############
 fighter_df = pd.read_csv ('fighters.csv') #read in fighters csv
@@ -64,32 +70,27 @@ fights_df['op1_surname'] = fights_df['opponent_1'].str.split(' ').apply(lambda  
 fights_df['op2_first_name'] = fights_df['opponent_2'].str.split(' ').apply(lambda x: x[0])
 fights_df['op2_last_name'] = fights_df['opponent_2'].str.split(' ').apply(lambda x: get_last_name(x))
 fights_df['op2_middle_name'] = fights_df['opponent_2'].str.split(' ').apply(lambda x: get_middle_name(x))
-fights_df['op1_surname'] = fights_df['opponent_2'].str.split(' ').apply(lambda  x: get_surname(x))
+fights_df['op1_surname'] = fights_df['opponent_2'].str.split(' ').apply(lambda x: get_surname(x))
 
 #split verdict field in fights table
 fights_df['winner'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[0]).str.lower()
-fights_df['decision'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[2] if 6 == len(x) else x[3] if 7 ==len(x) else x[4])
-fights_df['round'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[5] if 6 == len(x) else x[6] if 7 == len(x) else x[7])
+fights_df['decision'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[4] if 6 == len(x) else x[3] if 7 ==len(x) else x[4])
+fights_df['round'] = fights_df['verdict'].str.split(' ').apply(lambda x: x[2] if 6 == len(x) else x[6] if 7 == len(x) else x[7])
 
 ##########replace winner name field with opponent number############
 fights_df.loc[(fights_df['winner'] == fights_df['op1_last_name']), 'winner'] = 'op_1'
 fights_df.loc[(fights_df['winner'] == fights_df['op2_last_name']), 'winner'] = 'op_2'
 
-#remove symbols from height, reach, and ko_rate columns for importation into MySQL and write NULL values into missing spaces in the csv"
 fighter_df['height'] = fighter_df['height'].str.extract(r'\(([\d.]+) m\)')
 fighter_df['reach'] = fighter_df['reach'].str.extract(r'\(([\d.]+) cm\)')
 fighter_df['ko_rate'] = fighter_df['ko_rate'].str.replace('%', '')
-fighter_df.replace(pd.NA, 'NULL', inplace=True)
+
+fighter_df = fighter_df.fillna('NULL')
 fighter_df.replace('Unknown', 'NULL', inplace=True)
-fights_df.replace(pd.NA, 'NULL', inplace=True)
+fights_df = fights_df.fillna('NULL')
 
+fighter_df = fighter_df.reset_index(drop=True)
+fights_df = fights_df.reset_index(drop=True)
 
-with pd.option_context('display.max_rows', None,
-                       'display.max_columns', None,
-                       'display.precision', 3,
-                       ):
-    print(fighter_df[['first_name','height', 'reach']])
-    print(fights_df[['winner']])
-
-fighter_df.to_csv('fighters_clean.csv')
+fighter_df.to_csv('fighters_clean.csv', encoding="utf-8")
 fights_df.to_csv('fights_clean.csv')

@@ -1,4 +1,4 @@
--- insert fighter countries into fighter table
+-- insert fighter countries into country table
 INSERT INTO country (country_name)
 SELECT country 
 FROM fighters_all
@@ -17,11 +17,11 @@ ALTER TABLE fighter
 ADD middle_name VARCHAR(100),
 ADD surname VARCHAR(100);
 
+
 -- Insert data from fighters_all (imported cleaned csv) into fighter table
 INSERT INTO fighter (first_name, last_name, middle_name, surname, stanceID, age_2022, height, reach, countryID) 
 SELECT a.first_name, a.last_name, a.middle_name, a.surname, s.stanceID, a.age_2022, a.height, a.reach, c.countryID
 FROM fighters_all a JOIN stance s ON a.stance = s.stance_name JOIN country c ON a.country = c.country_name;
-
 
 
 -- Insert data from fighters_all (imported cleaned csv) into fighter_record table

@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The aim of this project is to analyze different boxer attributes leading to a decision in a boxing match, and to predict the outcome of matches given a set of attributes. Data cleaning was done in Python, database implementation in MySQL, and predictive modelling in MindsDB. Two boxing datasets containing data on fighters and popular bouts were downloaded from Kaggle. The data included in these datasets was originally scraped from [https://boxstat.co/[(boxstat.co). Further documentation can be found on the [Github wiki](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki) for this project.
+The aim of this project is to analyze different boxer attributes leading to a decision in a boxing match, and to predict the outcome of matches given a set of attributes. Data cleaning was done in Python, database implementation in MySQL, and predictive modelling in MindsDB. Two boxing datasets containing data on fighters and popular bouts were downloaded from Kaggle. The data included in these datasets was originally scraped from [https://boxstat.co/](boxstat.co). Further documentation can be found on the [Github wiki](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki) for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,7 +69,19 @@ As almost any boxing fan will tell you, predicting who will win a fight is an es
 <!-- ROADMAP -->
 ## Roadmap
 
-- 
+Database Design
+- [Database Build Plan](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Database-Build-Plan)
+- [Entity Relationship Diagram](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Entity-Relationship-Diagram)
+
+Database Implementation
+- [Data Cleaning](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Data-Cleaning)
+- [Database Construction](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Database-Construction)
+- [Data Importation](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Data-Importation)
+
+Predictive Modelling
+
+Sample Queries
+- [Sample Query 1](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-1)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -78,14 +90,8 @@ As almost any boxing fan will tell you, predicting who will win a fight is an es
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [README template](https://github.com/othneildrew/Best-README-Template/tree/master)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,8 +128,3 @@ As almost any boxing fan will tell you, predicting who will win a fight is an es
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-
-
-# Boxing-Database-CS61
-
-Project written in MySQL for Dartmouth CS61 in Summer 2023. Two boxing datasets containing data on fighters and popular bouts were downloaded from Kaggle. The data included in these datasets was scraped from https://boxstat.co/, which contains documentation explaining specific statistics. The schema was then designed, modeled, and implemented using mysql and python scripts. More documentation on steps can be found on the github wiki for this project: https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki

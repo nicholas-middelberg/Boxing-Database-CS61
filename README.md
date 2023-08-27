@@ -3,7 +3,7 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nicholas-middelberg/Boxing-Database-CS61"><strong>Explore the docs »</strong></a>
 
 
 

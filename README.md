@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-  <h3 align="center"> Boxing Database and Predictive Modelling</h3>
+  <h3 align="center"> Boxing Database and Predictive Modeling</h3>
 
   <p align="center">
     <br />
@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The aim of this project is to analyze different boxer attributes leading to a decision in a boxing match, and to predict the outcome of matches given a set of attributes. Data cleaning was done in Python, database implementation in MySQL, and predictive modelling in MindsDB. Two boxing datasets containing data on fighters and popular bouts were downloaded from Kaggle. The data included in these datasets was originally scraped from [https://boxstat.co/](boxstat.co). Further documentation can be found on the [Github wiki](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki) for this project.
+The aim of this project is to analyze different boxer attributes leading to a decision in a boxing match, and to predict the outcome of matches given a set of attributes. Data cleaning was done in Python, database implementation in MySQL, and predictive modeling in MindsDB. Two boxing datasets containing data on fighters and popular bouts were downloaded from Kaggle. The data included in these datasets was originally scraped from [https://boxstat.co/](boxstat.co). Further documentation can be found on the [Github wiki](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki) for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +78,7 @@ Database Implementation
 - [Database Construction](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Database-Construction)
 - [Data Importation](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Data-Importation)
 
-Predictive Modelling
+Predictive Modeling
 
 Sample Queries
 - [Sample Query 1](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-1)

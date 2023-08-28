@@ -97,6 +97,13 @@ Sample Queries
 ## Acknowledgments
 
 * [README template](https://github.com/othneildrew/Best-README-Template/tree/master)
+* [Kaggle Boxing Dataset](https://www.kaggle.com/datasets/iyadelwy/boxing-matches-dataset-predict-winner?select=fighters.csv)
+* [Boxing Data Website](https://boxstat.co/)
+* [Machine Learning Article](https://www.infoworld.com/article/3607762/10-databases-supporting-in-database-machine-learning.html)
+* [MindsDB website](https://docs.mindsdb.com/what-is-mindsdb)
+* [Tutorial Generating Models with MindsDB using PHP and MySQL](https://techsch.com/tutorials/mindsdb-machine-learning-mysql-tables-php)
+* [Recording of Workshop Hosted by MindsDB](https://mindsdb.com/events/hands-on-workshop-effective-machine-learning-inside-your-database)
+* [Github for Project Prediction of Absenteeism at Work](https://github.com/palashck/Prediction-of-Absenteeism-at-work)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

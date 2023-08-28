@@ -79,9 +79,17 @@ Database Implementation
 - [Data Importation](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Data-Importation)
 
 Predictive Modeling
+- [Research On ML Models](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Research-on-ML-models)
+- [Installing MindsDB Locally](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Installing-MindsDB-Locally)
+- [Establishing Connection to MySQL Server on MindsDB](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Establishing-Connection-to-MySQL-server-on-MindsDB)
+- [Creating and Querying Model](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Creating-and-Querying-Model)
 
 Sample Queries
 - [Sample Query 1](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-1)
+- [Sample Query 2](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-2)
+- [Sample Query 3](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-3)
+- [Sample Query 4](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Sample-Query-4)
+- [Key Takeaways From Modeling](https://github.com/nicholas-middelberg/Boxing-Database-CS61/wiki/Key-Takeaways-From-Modeling)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
